@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1334A56E1CB302EF0060791E /* RandomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334A5621CB302EF0060791E /* RandomColors.swift */; };
+		1334A56F1CB302EF0060791E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334A5641CB302EF0060791E /* Constant.swift */; };
+		1334A5701CB302EF0060791E /* AFHomeCatalogTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334A5661CB302EF0060791E /* AFHomeCatalogTVC.swift */; };
+		1334A5711CB302EF0060791E /* AFLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334A5671CB302EF0060791E /* AFLoginVC.swift */; };
+		1334A5721CB302EF0060791E /* AFSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334A5681CB302EF0060791E /* AFSignupVC.swift */; };
+		1334A5731CB302EF0060791E /* AFArticleItemCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334A56A1CB302EF0060791E /* AFArticleItemCVCell.swift */; };
+		1334A5741CB302EF0060791E /* AFCategoryTitleCRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334A56B1CB302EF0060791E /* AFCategoryTitleCRV.swift */; };
+		1334A5751CB302EF0060791E /* AFHomeCatalogTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334A56C1CB302EF0060791E /* AFHomeCatalogTVCell.swift */; };
+		1378E2EC1C739D3C00A5D315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1378E2EB1C739D3C00A5D315 /* AppDelegate.swift */; };
+		1378E2F11C739D3C00A5D315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1378E2EF1C739D3C00A5D315 /* Main.storyboard */; };
+		1378E2F41C739D3C00A5D315 /* ArticleFlix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1378E2F21C739D3C00A5D315 /* ArticleFlix.xcdatamodeld */; };
+		1378E2F61C739D3C00A5D315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1378E2F51C739D3C00A5D315 /* Assets.xcassets */; };
+		1378E2F91C739D3C00A5D315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1378E2F71C739D3C00A5D315 /* LaunchScreen.storyboard */; };
+		A6FE8840EF3819AD26636C74 /* Pods_ArticleFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6C76A61D66A3324FA2BAB5 /* Pods_ArticleFlix.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1334A5621CB302EF0060791E /* RandomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColors.swift; sourceTree = "<group>"; };
+		1334A5641CB302EF0060791E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		1334A5661CB302EF0060791E /* AFHomeCatalogTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFHomeCatalogTVC.swift; sourceTree = "<group>"; };
+		1334A5671CB302EF0060791E /* AFLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFLoginVC.swift; sourceTree = "<group>"; };
+		1334A5681CB302EF0060791E /* AFSignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFSignupVC.swift; sourceTree = "<group>"; };
+		1334A56A1CB302EF0060791E /* AFArticleItemCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFArticleItemCVCell.swift; sourceTree = "<group>"; };
+		1334A56B1CB302EF0060791E /* AFCategoryTitleCRV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCategoryTitleCRV.swift; sourceTree = "<group>"; };
+		1334A56C1CB302EF0060791E /* AFHomeCatalogTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFHomeCatalogTVCell.swift; sourceTree = "<group>"; };
+		1378E2E81C739D3C00A5D315 /* ArticleFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticleFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1378E2EB1C739D3C00A5D315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1378E2F01C739D3C00A5D315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1378E2F31C739D3C00A5D315 /* ArticleFlix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleFlix.xcdatamodel; sourceTree = "<group>"; };
+		1378E2F51C739D3C00A5D315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1378E2F81C739D3C00A5D315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1378E2FA1C739D3C00A5D315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D63EE70F4AB840FE0C617F /* Pods-ArticleFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticleFlix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArticleFlix/Pods-ArticleFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		C2457633BE42A4399C4A3E14 /* Pods-ArticleFlix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticleFlix.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArticleFlix/Pods-ArticleFlix.release.xcconfig"; sourceTree = "<group>"; };
+		FA6C76A61D66A3324FA2BAB5 /* Pods_ArticleFlix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticleFlix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1378E2E51C739D3C00A5D315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6FE8840EF3819AD26636C74 /* Pods_ArticleFlix.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1334A5611CB302EF0060791E /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				1334A5621CB302EF0060791E /* RandomColors.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		1334A5631CB302EF0060791E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1334A5641CB302EF0060791E /* Constant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1334A5651CB302EF0060791E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1334A5661CB302EF0060791E /* AFHomeCatalogTVC.swift */,
+				1334A5671CB302EF0060791E /* AFLoginVC.swift */,
+				1334A5681CB302EF0060791E /* AFSignupVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1334A5691CB302EF0060791E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1334A56A1CB302EF0060791E /* AFArticleItemCVCell.swift */,
+				1334A56B1CB302EF0060791E /* AFCategoryTitleCRV.swift */,
+				1334A56C1CB302EF0060791E /* AFHomeCatalogTVCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1334A56D1CB302EF0060791E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1378E2DF1C739D3C00A5D315 = {
+			isa = PBXGroup;
+			children = (
+				1378E2EA1C739D3C00A5D315 /* ArticleFlix */,
+				1378E2E91C739D3C00A5D315 /* Products */,
+				DDBDAB64506C31883954063A /* Pods */,
+				C0CC2FF9FA792B5CF4B6E8D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1378E2E91C739D3C00A5D315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1378E2E81C739D3C00A5D315 /* ArticleFlix.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1378E2EA1C739D3C00A5D315 /* ArticleFlix */ = {
+			isa = PBXGroup;
+			children = (
+				1334A5611CB302EF0060791E /* Libs */,
+				1334A5631CB302EF0060791E /* Models */,
+				1334A5651CB302EF0060791E /* Controllers */,
+				1334A5691CB302EF0060791E /* Views */,
+				1334A56D1CB302EF0060791E /* Extensions */,
+				1378E2EB1C739D3C00A5D315 /* AppDelegate.swift */,
+				1378E2EF1C739D3C00A5D315 /* Main.storyboard */,
+				1378E2F51C739D3C00A5D315 /* Assets.xcassets */,
+				1378E2F71C739D3C00A5D315 /* LaunchScreen.storyboard */,
+				1378E2FA1C739D3C00A5D315 /* Info.plist */,
+				1378E2F21C739D3C00A5D315 /* ArticleFlix.xcdatamodeld */,
+			);
+			path = ArticleFlix;
+			sourceTree = "<group>";
+		};
+		C0CC2FF9FA792B5CF4B6E8D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C76A61D66A3324FA2BAB5 /* Pods_ArticleFlix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDBDAB64506C31883954063A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34D63EE70F4AB840FE0C617F /* Pods-ArticleFlix.debug.xcconfig */,
+				C2457633BE42A4399C4A3E14 /* Pods-ArticleFlix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1378E2E71C739D3C00A5D315 /* ArticleFlix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1378E2FD1C739D3C00A5D315 /* Build configuration list for PBXNativeTarget "ArticleFlix" */;
+			buildPhases = (
+				0418C73F1DF67D06EEB80E0C /* Check Pods Manifest.lock */,
+				1378E2E41C739D3C00A5D315 /* Sources */,
+				1378E2E51C739D3C00A5D315 /* Frameworks */,
+				1378E2E61C739D3C00A5D315 /* Resources */,
+				742673A327DAD8134010B4C2 /* Embed Pods Frameworks */,
+				931F4ED3D2E8A06076114AF1 /* Copy Pods Resources */,
+				13475A6B1CCEA8190086D517 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArticleFlix;
+			productName = ArticleFlix;
+			productReference = 1378E2E81C739D3C00A5D315 /* ArticleFlix.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1378E2E01C739D3C00A5D315 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Shaher Kassam";
+				TargetAttributes = {
+					1378E2E71C739D3C00A5D315 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 89VZUR8ZMZ;
+					};
+				};
+			};
+			buildConfigurationList = 1378E2E31C739D3C00A5D315 /* Build configuration list for PBXProject "ArticleFlix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1378E2DF1C739D3C00A5D315;
+			productRefGroup = 1378E2E91C739D3C00A5D315 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1378E2E71C739D3C00A5D315 /* ArticleFlix */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1378E2E61C739D3C00A5D315 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1378E2F91C739D3C00A5D315 /* LaunchScreen.storyboard in Resources */,
+				1378E2F61C739D3C00A5D315 /* Assets.xcassets in Resources */,
+				1378E2F11C739D3C00A5D315 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0418C73F1DF67D06EEB80E0C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		13475A6B1CCEA8190086D517 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7583bc0fd30c1af6c3eb125adca7d4290114942a be0b94c8bfc4426e7cbca7d41dd29daa1eec0274fbd86977d1144d79c3cddcb5";
+		};
+		742673A327DAD8134010B4C2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArticleFlix/Pods-ArticleFlix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		931F4ED3D2E8A06076114AF1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArticleFlix/Pods-ArticleFlix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1378E2E41C739D3C00A5D315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1334A5741CB302EF0060791E /* AFCategoryTitleCRV.swift in Sources */,
+				1334A5721CB302EF0060791E /* AFSignupVC.swift in Sources */,
+				1378E2F41C739D3C00A5D315 /* ArticleFlix.xcdatamodeld in Sources */,
+				1334A5701CB302EF0060791E /* AFHomeCatalogTVC.swift in Sources */,
+				1378E2EC1C739D3C00A5D315 /* AppDelegate.swift in Sources */,
+				1334A5711CB302EF0060791E /* AFLoginVC.swift in Sources */,
+				1334A56E1CB302EF0060791E /* RandomColors.swift in Sources */,
+				1334A5751CB302EF0060791E /* AFHomeCatalogTVCell.swift in Sources */,
+				1334A56F1CB302EF0060791E /* Constant.swift in Sources */,
+				1334A5731CB302EF0060791E /* AFArticleItemCVCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1378E2EF1C739D3C00A5D315 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1378E2F01C739D3C00A5D315 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1378E2F71C739D3C00A5D315 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1378E2F81C739D3C00A5D315 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1378E2FB1C739D3C00A5D315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1378E2FC1C739D3C00A5D315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1378E2FE1C739D3C00A5D315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D63EE70F4AB840FE0C617F /* Pods-ArticleFlix.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ArticleFlix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ArticleFlix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1378E2FF1C739D3C00A5D315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2457633BE42A4399C4A3E14 /* Pods-ArticleFlix.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ArticleFlix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ArticleFlix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1378E2E31C739D3C00A5D315 /* Build configuration list for PBXProject "ArticleFlix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1378E2FB1C739D3C00A5D315 /* Debug */,
+				1378E2FC1C739D3C00A5D315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1378E2FD1C739D3C00A5D315 /* Build configuration list for PBXNativeTarget "ArticleFlix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1378E2FE1C739D3C00A5D315 /* Debug */,
+				1378E2FF1C739D3C00A5D315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1378E2F21C739D3C00A5D315 /* ArticleFlix.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1378E2F31C739D3C00A5D315 /* ArticleFlix.xcdatamodel */,
+			);
+			currentVersion = 1378E2F31C739D3C00A5D315 /* ArticleFlix.xcdatamodel */;
+			path = ArticleFlix.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1378E2E01C739D3C00A5D315 /* Project object */;
+}

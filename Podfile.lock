@@ -1,0 +1,58 @@
+PODS:
+  - AEXML (2.1.0)
+  - Bolts/Tasks (1.7.0)
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
+  - FolioReaderKit (0.6.2):
+    - AEXML
+    - FontBlaster
+    - JSQWebViewController
+    - SSZipArchive
+    - UIMenuItem-CXAImageSupport
+    - ZFDragableModalTransition
+  - FontBlaster (2.1.2)
+  - JSQWebViewController (3.0.0)
+  - MBProgressHUD (0.9.2)
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
+  - SCLAlertView (0.5.3)
+  - SSZipArchive (1.1)
+  - UIMenuItem-CXAImageSupport (0.0.1)
+  - ZFDragableModalTransition (0.6)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - FolioReaderKit
+  - MBProgressHUD (~> 0.9.2)
+  - Parse
+  - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`, branch
+    `master`)
+
+EXTERNAL SOURCES:
+  SCLAlertView:
+    :branch: master
+    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
+
+CHECKOUT OPTIONS:
+  SCLAlertView:
+    :commit: 079d4a21277adcbc2d30e90fa16f8013625c95d5
+    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
+
+SPEC CHECKSUMS:
+  AEXML: 0e2f657fdc67e17905682a06d55583a863d80803
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  FolioReaderKit: 625aa6f1021529182490879308151cf747e46a55
+  FontBlaster: 95ebf29a025dbeda4530300099c6f533e805682c
+  JSQWebViewController: eaa6bd68d9e1426ae25ade99c9bbde4c6cdd4120
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  SCLAlertView: dcd89117943cd804208645e0702a913397e5b352
+  SSZipArchive: de3d215ab73f87db627f81f2ce24f1731e3886c3
+  UIMenuItem-CXAImageSupport: 2945e2af4487414caad801ed8ff6ac8db274e986
+  ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
+
+COCOAPODS: 0.39.0
