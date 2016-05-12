@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FolioReaderKit
 import Parse
 import MBProgressHUD
 

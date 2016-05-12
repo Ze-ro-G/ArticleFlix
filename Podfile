@@ -5,12 +5,17 @@ use_frameworks!
 
 target 'ArticleFlix' do
 
-pod 'FolioReaderKit'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git', :branch => 'master'
 pod 'Parse'
 pod 'Fabric'
 pod 'Crashlytics'
+pod 'SSZipArchive'
+pod 'UIMenuItem-CXAImageSupport'
+pod 'ZFDragableModalTransition'
+pod 'AEXML'
+pod 'FontBlaster'
+pod 'JSQWebViewController'
 
 xcodeproj 'ArticleFlix.xcodeproj'
 

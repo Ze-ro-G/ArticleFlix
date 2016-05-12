@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import FolioReaderKit
 import Parse
 import Fabric
 import Crashlytics
