@@ -22,29 +22,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_black" translatesAutoresizingMaskIntoConstraints="NO" id="468-MT-6qw">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ArticleFlix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b2-1r-Hgt">
-                                <rect key="frame" x="262" y="100" width="76" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="ybj-Rh-H6o"/>
-                                    <constraint firstAttribute="width" constant="250" id="z4S-Oj-X3q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="46"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ybj-Rh-H6o"/>
-                                        <exclude reference="z4S-Oj-X3q"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="ybj-Rh-H6o"/>
-                                        <include reference="z4S-Oj-X3q"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="bNN-3A-66i">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="bNN-3A-66i">
                                 <rect key="frame" x="217" y="192" width="167" height="30"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -107,6 +85,31 @@
                                     <action selector="crash" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXH-v3-bbb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ArticleFlix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b2-1r-Hgt">
+                                <rect key="frame" x="262" y="100" width="76" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="JOc-jg-NgJ"/>
+                                    <constraint firstAttribute="height" constant="53" id="ybj-Rh-H6o"/>
+                                    <constraint firstAttribute="width" constant="250" id="z4S-Oj-X3q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="66"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JOc-jg-NgJ"/>
+                                        <exclude reference="ybj-Rh-H6o"/>
+                                        <exclude reference="z4S-Oj-X3q"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="JOc-jg-NgJ"/>
+                                        <include reference="ybj-Rh-H6o"/>
+                                        <exclude reference="z4S-Oj-X3q"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -126,6 +129,7 @@
                             <constraint firstItem="hWy-6U-wJ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFA-iE-S04"/>
                             <constraint firstItem="j3X-ct-8d0" firstAttribute="leading" secondItem="lSo-6c-of6" secondAttribute="leading" id="VGT-Bk-lmq"/>
                             <constraint firstItem="FHZ-PK-k04" firstAttribute="width" secondItem="bNN-3A-66i" secondAttribute="width" id="VJZ-5Q-9Ti"/>
+                            <constraint firstItem="bNN-3A-66i" firstAttribute="top" secondItem="3b2-1r-Hgt" secondAttribute="bottom" constant="34" id="Yi9-fk-OgI"/>
                             <constraint firstItem="468-MT-6qw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aCB-di-VkO"/>
                             <constraint firstItem="FHZ-PK-k04" firstAttribute="top" secondItem="bNN-3A-66i" secondAttribute="bottom" constant="1" id="b09-0f-4I2"/>
                             <constraint firstItem="lSo-6c-of6" firstAttribute="top" secondItem="hWy-6U-wJ8" secondAttribute="bottom" constant="59" id="eZL-WV-NKu"/>
@@ -153,6 +157,7 @@
                                 <exclude reference="aCB-di-VkO"/>
                                 <exclude reference="pf5-CF-JtJ"/>
                                 <exclude reference="vPV-Vn-6Se"/>
+                                <exclude reference="Yi9-fk-OgI"/>
                                 <exclude reference="LbT-J9-ZBA"/>
                                 <exclude reference="VJZ-5Q-9Ti"/>
                                 <exclude reference="b09-0f-4I2"/>
@@ -176,6 +181,8 @@
                                 <include reference="aCB-di-VkO"/>
                                 <include reference="pf5-CF-JtJ"/>
                                 <include reference="vPV-Vn-6Se"/>
+                                <exclude reference="CmC-lk-5cR"/>
+                                <include reference="Yi9-fk-OgI"/>
                                 <include reference="LbT-J9-ZBA"/>
                                 <include reference="VJZ-5Q-9Ti"/>
                                 <include reference="b09-0f-4I2"/>
@@ -717,6 +724,6 @@
         <image name="background_black" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f2z-Nu-hlg"/>
+        <segue reference="MDE-Oz-hJ5"/>
     </inferredMetricsTieBreakers>
 </document>
