@@ -315,7 +315,7 @@ public class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UICo
     }
 
     func configureNavBar() {
-        let navBackground = isNight(readerConfig.nightModeMenuBackground, UIColor.whiteColor())
+        let navBackground = isNight(readerConfig.nightModeMenuBackground, UIColor(rgba: "#DEDEDE"))
         let tintColor = readerConfig.tintColor
         let navText = isNight(UIColor.whiteColor(), UIColor.blackColor())
         let font = UIFont(name: "Avenir-Light", size: 17)!
@@ -324,15 +324,27 @@ public class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UICo
     
     func configureNavBarButtons() {
 
-        // Navbar buttons
+        // Navbar icons
         let shareIcon = UIImage(readerImageNamed: "btn-navbar-share")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
         let audioIcon = UIImage(readerImageNamed: "man-speech-icon")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
         let menuIcon = UIImage(readerImageNamed: "btn-navbar-menu")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
+        let fontIcon = UIImage(readerImageNamed: "icon-font")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
+        let closeIcon = UIImage(readerImageNamed: "icon-close")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuIcon, style: UIBarButtonItemStyle.Plain, target: self, action:#selector(FolioReaderCenter.toggleMenu(_:)))
+        // Navbar buttons
+        let closeButton = UIBarButtonItem(image: closeIcon, style: UIBarButtonItemStyle.Plain, target: self, action:#selector(FolioReaderCenter.didSelectClose(_:)))
 
+        let menuButton = UIBarButtonItem(image: menuIcon, style: UIBarButtonItemStyle.Plain, target: self, action:#selector(FolioReaderCenter.toggleMenu(_:)))
+
+        let fontButton = UIBarButtonItem(image: fontIcon, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(FolioReaderCenter.didSelectFont(_:)))
+        
+        
         var rightBarIcons = [UIBarButtonItem]()
+        var leftBarIcons = [UIBarButtonItem]()
 
+
+        rightBarIcons.append(fontButton)
+        
         if readerConfig.allowSharing {
             rightBarIcons.append(UIBarButtonItem(image: shareIcon, style: UIBarButtonItemStyle.Plain, target: self, action:#selector(FolioReaderCenter.shareChapter(_:))))
         }
@@ -340,8 +352,13 @@ public class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UICo
         if book.hasAudio() || readerConfig.enableTTS {
             rightBarIcons.append(UIBarButtonItem(image: audioIcon, style: UIBarButtonItemStyle.Plain, target: self, action:#selector(FolioReaderCenter.togglePlay(_:))))
         }
-
+        
+        
+        leftBarIcons.append(closeButton)
+        leftBarIcons.append(menuButton)
+        
         navigationItem.rightBarButtonItems = rightBarIcons
+        navigationItem.leftBarButtonItems = leftBarIcons
     }
 
     func reloadData() {
@@ -417,6 +434,22 @@ public class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UICo
     
     func toggleMenu(sender: UIBarButtonItem) {
         FolioReader.sharedInstance.readerContainer.toggleLeftPanel()
+    }
+    
+    // MARK: Toggle Font menu
+
+    func didSelectFont(sender: UIBarButtonItem) {
+        //FolioReader.sharedInstance.readerContainer.toggleLeftPanel()
+        FolioReader.sharedInstance.readerCenter.presentFontsMenu()
+    }
+    
+    // MARK: Close
+    func didSelectClose(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: {
+            FolioReader.sharedInstance.isReaderOpen = false
+            FolioReader.sharedInstance.isReaderReady = false
+            FolioReader.sharedInstance.readerAudioPlayer.stop()
+        })
     }
     
     override public func didReceiveMemoryWarning() {

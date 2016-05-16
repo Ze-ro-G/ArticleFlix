@@ -45,7 +45,7 @@ class FolioReaderSidePanel: UIViewController, UITableViewDelegate, UITableViewDa
         toolBar.tintColor = readerConfig.toolBarTintColor
         toolBar.clipsToBounds = true
         toolBar.translucent = false
-        view.addSubview(toolBar)
+        //view.addSubview(toolBar)
         
         let imageHighlight = UIImage(readerImageNamed: "icon-highlight")
         let imageClose = UIImage(readerImageNamed: "icon-close")
@@ -68,7 +68,7 @@ class FolioReaderSidePanel: UIViewController, UITableViewDelegate, UITableViewDa
         let iconFont = UIBarButtonItem(image: imageFont, style: .Plain, target: self, action: #selector(FolioReaderSidePanel.didSelectFont(_:)))
         iconFont.width = space
         
-        toolBar.setItems([noSpace, iconClose, iconFont], animated: false)
+        toolBar.setItems([noSpace, iconClose], animated: false)
         
         
         // Register cell classes

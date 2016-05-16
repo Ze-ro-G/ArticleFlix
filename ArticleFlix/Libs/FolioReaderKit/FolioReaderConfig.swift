@@ -22,9 +22,9 @@ public class FolioReaderConfig: NSObject {
     public lazy var mediaOverlayColor: UIColor! = self.tintColor
     
     // Custom actions
-    public var shouldHideNavigationOnTap = true
-    public var allowSharing = true
-    public var enableTTS = true
+    public var shouldHideNavigationOnTap = false
+    public var allowSharing = false
+    public var enableTTS = false
     
     // Reader Strings
     public var localizedHighlightsTitle: String
@@ -50,11 +50,22 @@ public class FolioReaderConfig: NSObject {
     // MARK: - Init with defaults
     
     public override init() {
-        self.tintColor = UIColor(rgba: "#6ACC50")
+        // 6ACC50 : un vert degueu
+        //self.tintColor = UIColor(rgba: "#6ACC50")
+        self.tintColor = UIColor.redColor()
+        
+        // Bar Hamburger
         self.toolBarTintColor = UIColor.whiteColor()
+        
+        // F5F5F5: white smoke
+        // Menu Hamburger
         self.menuBackgroundColor = UIColor(rgba: "#F5F5F5")
+        
+        // D7D7D7 : Light Grey
         self.menuSeparatorColor = UIColor(rgba: "#D7D7D7")
+        // 767676 : mid grey
         self.menuTextColor = UIColor(rgba: "#767676")
+        
         self.nightModeBackground = UIColor(rgba: "#131313")
         self.nightModeMenuBackground = UIColor(rgba: "#1E1E1E")
         self.nightModeSeparatorColor = UIColor(white: 0.5, alpha: 0.2)

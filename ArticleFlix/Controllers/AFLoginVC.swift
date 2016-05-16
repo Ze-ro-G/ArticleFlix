@@ -26,7 +26,6 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         print("Login VDL IN")
         
         emailTextField.delegate = self
@@ -39,8 +38,7 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"password",
             attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         
-        SCLAlertView().showInfo("Important info", subTitle: "You are great")
-
+        
         print("Login VDL OUT")
     }
     
@@ -114,7 +112,7 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
                 self.performSegueWithIdentifier("gotoHome", sender: nil)
             } else {
                 if let error = error {
-                    let errorString = error.userInfo["error"] as? NSString
+                    //let errorString = error.userInfo["error"] as? NSString
                     // Show the errorString somewhere and let the user try again.
                     switch (error.code) {
                     case 200:
@@ -181,8 +179,8 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func crash() {
-        Crashlytics.sharedInstance().crash()
+    @IBAction func recoverPassword() {
+        //Crashlytics.sharedInstance().crash()
 
         print("pop")
         
