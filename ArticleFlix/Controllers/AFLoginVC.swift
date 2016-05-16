@@ -38,13 +38,17 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"password",
             attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         
-        
-        print("Login VDL OUT")
+                print("Login VDL OUT")
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // End editing when touches the screen
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -62,7 +66,6 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
         
     }
 
-    
     @IBAction func login(sender: AnyObject) {
         
         let email = emailTextField.text!
