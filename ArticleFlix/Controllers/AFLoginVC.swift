@@ -119,19 +119,20 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
                     // Show the errorString somewhere and let the user try again.
                     switch (error.code) {
                     case 200:
-                        SCLAlertView().showError("User Email Missing", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("E-mail manquant", subTitle: "Code Erreur \(error.code)")
                     case 125:
-                        SCLAlertView().showError("User Email Invalid", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("E-mail non valide", subTitle: "Code Erreur \(error.code)")
                     case 201:
-                        SCLAlertView().showError("Password Missing", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("Mot de passe manquant", subTitle: "Code Erreur \(error.code)")
                     case 203:
-                        SCLAlertView().showError("User Email Taken", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("E-mail déjà existant", subTitle: "Code Erreur \(error.code)")
                     case 205:
-                        SCLAlertView().showError("User Email Not Found", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("E-mail inexistant", subTitle: "Code Erreur \(error.code)")
                     case 208:
-                        SCLAlertView().showError("User Already Exist", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("Utilisateur déjà existant", subTitle: "Code Erreur \(error.code)")
                     default:
-                        SCLAlertView().showError("Handle default situation", subTitle: "Error Code \(error.code)")            }
+                        SCLAlertView().showError("Erreur de connexion", subTitle: "Code Erreur \(error.code)")
+                    }
                 }
             }
         }
@@ -185,13 +186,37 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
     @IBAction func recoverPassword() {
         //Crashlytics.sharedInstance().crash()
 
-        print("pop")
         
-        
+        PFUser.requestPasswordResetForEmailInBackground(emailTextField.text!, block: { (succeeded: Bool, error: NSError?) -> Void in
+            if error == nil {
+                if succeeded { // SUCCESSFULLY SENT TO EMAIL
+                    print("Reset email sent to your inbox");
+                    SCLAlertView().showSuccess("Mot de passe réinitialisé", subTitle: "Un E-mail a été envoyé")
+                }
+            }
+            else { //ERROR OCCURED, DISPLAY ERROR MESSAGE
+                print(error!.description);
+                
+                switch (error!.code) {
+                case 200:
+                    SCLAlertView().showError("E-mail manquant", subTitle: "Code Erreur \(error!.code)")
+                case 204:
+                    SCLAlertView().showError("Veuillez rentrer votre e-mail", subTitle: "Code Erreur \(error!.code)")
+                case 125:
+                    SCLAlertView().showError("E-mail non valide", subTitle: "Code Erreur \(error!.code)")
+                case 201:
+                    SCLAlertView().showError("Mot de passe manquant", subTitle: "Code Erreur \(error!.code)")
+                case 203:
+                    SCLAlertView().showError("E-mail déjà existant", subTitle: "Code Erreur \(error!.code)")
+                case 205:
+                    SCLAlertView().showError("E-mail inexistant", subTitle: "Code Erreur \(error!.code)")
+                case 208:
+                    SCLAlertView().showError("Utilisateur déjà existant", subTitle: "Code Erreur \(error!.code)")
+                default:
+                    SCLAlertView().showError("Erreur de connexion", subTitle: "Code Erreur \(error!.code)")
+                }
+            }
+        });
     }
-    
-    
-    
-    
 }
 

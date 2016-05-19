@@ -563,9 +563,9 @@
 		1334A5651CB302EF0060791E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1334A5661CB302EF0060791E /* AFHomeCatalogTVC.swift */,
 				1334A5671CB302EF0060791E /* AFLoginVC.swift */,
 				1334A5681CB302EF0060791E /* AFSignupVC.swift */,
+				1334A5661CB302EF0060791E /* AFHomeCatalogTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

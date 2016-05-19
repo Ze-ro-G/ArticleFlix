@@ -23,6 +23,7 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet weak var newsletterSwitch: UISwitch!
     @IBOutlet weak var conditionsSwitch: UISwitch!
+    @IBOutlet var backButton: UIButton!
     
     
     // MARK: - Properties
@@ -35,7 +36,10 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         repasswordTextField.delegate = self
         // Do any additional setup after loading the view.
-    }
+        
+
+        
+                }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,7 +63,10 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
+    @IBAction func backButtonPressed(sender:UIButton) {
+        
+        navigationController?.popViewControllerAnimated(true)
+    }
     
     @IBAction func signup(sender: AnyObject) {
         
@@ -86,7 +93,7 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
         //
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.mode = MBProgressHUDMode.Indeterminate
-        hud.labelText = "Connexion"
+        hud.labelText = "Inscription en cours"
         
         
         // MARK: - FIREBASE Signup
@@ -134,7 +141,7 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
                 hud.hide(true)
                 
                 if let error = error {
-                    let errorString = error.userInfo["error"] as? NSString
+                    _ = error.userInfo["error"] as? NSString
                     // Show the errorString somewhere and let the user try again.
                     switch (error.code) {
                     case 200:
@@ -154,7 +161,7 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
                     }
                 } else {
                     // Hooray! Let them use the app now.
-                    SCLAlertView().showSuccess("Connexion reussi", subTitle: "Compte cree")
+                    SCLAlertView().showSuccess("Inscription réussie", subTitle: "Compte cree")
                     self.performSegueWithIdentifier("gotoHome", sender: nil)
                 }
             }
