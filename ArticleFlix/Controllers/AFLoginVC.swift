@@ -30,7 +30,7 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        
+
         
         emailTextField.attributedPlaceholder = NSAttributedString(string:"email",
             attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
@@ -73,112 +73,64 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
         
         
         
-        /*
-         // Save Local
-         if userDef.objectForKey(email) != nil {
-         var userDic: [String:String] = userDef.objectForKey(email) as! [String:String]
-         
-         
-         //print (userDic)
-         //print(userDef.boolForKey("SignedIn"))
-         print("iSSignedInd : \(userDef.boolForKey("SignedIn"))")
-         
-         
-         if (userDic["email"] != "") && (pwd == userDic["pwd"]){
-         print("user et pwd ok")
-         
-         userDef.setBool(true, forKey: "SignedIn")
-         
-         self.performSegueWithIdentifier("gotoHome", sender: nil)
-         
-         }
-         }
-         */
-        
         // MARK: - Gestion de widget de loading
         //
-        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        hud.mode = MBProgressHUDMode.Indeterminate
-        hud.labelText = "Loading"
+
 
         // MARK: - PARSE Login
         //
         
-        PFUser.logInWithUsernameInBackground(email, password: pwd) {
-            (user: PFUser?, error: NSError?) -> Void in
+        if(email.isEmpty || pwd.isEmpty){
+            SCLAlertView().showError("Champs manquants", subTitle: "Veuillez renseigner une adresse mail et un mot de passe")
+        
+        }
+        else {
             
-            hud.hide(true)
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.mode = MBProgressHUDMode.Indeterminate
+            hud.labelText = "Loading"
             
-            if user != nil {
-                // Do stuff after successful login.
-                print("Login Segue")
-                self.performSegueWithIdentifier("gotoHome", sender: nil)
-            } else {
-                if let error = error {
-                    //let errorString = error.userInfo["error"] as? NSString
-                    // Show the errorString somewhere and let the user try again.
-                    switch (error.code) {
-                    case 200:
-                        SCLAlertView().showError("E-mail manquant", subTitle: "Code Erreur \(error.code)")
-                    case 125:
-                        SCLAlertView().showError("E-mail non valide", subTitle: "Code Erreur \(error.code)")
-                    case 201:
-                        SCLAlertView().showError("Mot de passe manquant", subTitle: "Code Erreur \(error.code)")
-                    case 203:
-                        SCLAlertView().showError("E-mail déjà existant", subTitle: "Code Erreur \(error.code)")
-                    case 205:
-                        SCLAlertView().showError("E-mail inexistant", subTitle: "Code Erreur \(error.code)")
-                    case 208:
-                        SCLAlertView().showError("Utilisateur déjà existant", subTitle: "Code Erreur \(error.code)")
-                    default:
-                        SCLAlertView().showError("Erreur de connexion", subTitle: "Code Erreur \(error.code)")
+            PFUser.logInWithUsernameInBackground(email, password: pwd) {
+                (user: PFUser?, error: NSError?) -> Void in
+                
+                hud.hide(true)
+                
+                if user != nil {
+                    // Do stuff after successful login.
+                    print("Login Segue")
+                    self.performSegueWithIdentifier("gotoHome", sender: nil)
+                } else {
+                    if let error = error {
+                        //let errorString = error.userInfo["error"] as? NSString
+                        // Show the errorString somewhere and let the user try again.
+                        switch (error.code) {
+                        case 200:
+                            SCLAlertView().showError("E-mail manquant", subTitle: "Code Erreur \(error.code)")
+                        case 125:
+                            SCLAlertView().showError("E-mail non valide", subTitle: "Code Erreur \(error.code)")
+                        case 201:
+                            SCLAlertView().showError("Mot de passe manquant", subTitle: "Code Erreur \(error.code)")
+                        case 203:
+                            SCLAlertView().showError("E-mail déjà existant", subTitle: "Code Erreur \(error.code)")
+                        case 204:
+                            SCLAlertView().showError("Erreur", subTitle: "Vous devez renseigner une adresse mail")
+                        case 205:
+                            SCLAlertView().showError("E-mail inexistant", subTitle: "Code Erreur \(error.code)")
+                        case 208:
+                            SCLAlertView().showError("Utilisateur déjà existant", subTitle: "Code Erreur \(error.code)")
+                        case 101:
+                            SCLAlertView().showError("Erreur", subTitle: "L'email ou le mot de passe renseigné est incorrect")
+
+                            
+                        default:
+                            SCLAlertView().showError("Erreur de connexion", subTitle: "Code Erreur \(error.code)")
+                        }
                     }
                 }
             }
+
         }
-    
-    
-        
-        // MARK: - FIREBASE Login
-        //
-        /*
-         firebaseRef.authUser(email, password: pwd,
-         withCompletionBlock: { (error, auth) in
-         
-         hud.hide(true)
-         
-         print("Login error: \(error)")
-         print("Login auth: \(auth)")
-         print("Login email: \(email)")
-         print("Login password: \(pwd)")
-         
-         if (error != nil) {
-         // an error occurred while attempting login
-         if let errorCode = FAuthenticationError(rawValue: error.code) {
-         switch (errorCode) {
-         case .UserDoesNotExist:
-         print("Handle invalid user")
-         SCLAlertView().showError("Handle invalid user", subTitle: "User Does not exist")
-         case .InvalidEmail:
-         print("Handle invalid email")
-         SCLAlertView().showError("Handle invalid email", subTitle: "Invalid email")
-         case .InvalidPassword:
-         print("Handle invalid password")
-         SCLAlertView().showError("Handle invalid password", subTitle: "Invalid Password")
-         default:
-         print("Handle default situation")
-         SCLAlertView().showError("Handle default situation", subTitle: "Default Situation")
-         }
-         }
-         
-         }
-         else {
-         print("Login Segue")
-         self.performSegueWithIdentifier("gotoHome", sender: nil)
-         }
-         })
-         
-         */
+
         
     }
     
@@ -201,7 +153,7 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
                 case 200:
                     SCLAlertView().showError("E-mail manquant", subTitle: "Code Erreur \(error!.code)")
                 case 204:
-                    SCLAlertView().showError("Veuillez rentrer votre e-mail", subTitle: "Code Erreur \(error!.code)")
+                    SCLAlertView().showError("E-mail manquant", subTitle: "Veuillez rentrer votre e-mail")
                 case 125:
                     SCLAlertView().showError("E-mail non valide", subTitle: "Code Erreur \(error!.code)")
                 case 201:

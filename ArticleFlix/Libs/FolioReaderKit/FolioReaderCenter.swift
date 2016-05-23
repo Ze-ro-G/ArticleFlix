@@ -362,7 +362,7 @@ public class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UICo
     }
 
     func reloadData() {
-        loadingView.stopAnimating()
+       // loadingView.stopAnimating()
         bookShareLink = readerConfig.localizedShareWebLink
         totalPages = book.spine.spineReferences.count
 

@@ -27,26 +27,27 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
     //let userDef = NSUserDefaults.standardUserDefaults()
     var selectedCell: AFArticleItemCVCell!
     
+
     // MARK: - Properties
-    var titles: [String] = []
-    var _books: [PFObject] = []
+
+    var _booksUnsorted: [PFObject] = []
     var _categories: [PFObject] = []
+
+    
     var _library: [String:[PFObject]] = [:]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("HTVC didLoad")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+
         self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background_black")!)
-        
+                
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.redColor()]
+
+        self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
         // Init Titres des sections
-        titles = ["covers0", "covers1", "covers2", "covers3"]
         
         // Chargement de la liste des categories et des livres
         getCategories()
@@ -94,6 +95,8 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         cell?.backgroundColor = UIColor.clearColor()
         
         //cell!.textLabel?.text = "cover \(indexPath.row)"
+        let values = (_library.values)
+        
         let dictKeys = [String](_library.keys)
         cell?.titel.text = dictKeys[indexPath.row]
         cell!.collectionView.reloadData()
@@ -121,17 +124,28 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! AFArticleItemCVCell
         cell.backgroundColor = model[collectionView.tag][indexPath.item]
         
-        let book = _books[indexPath.item]
         
-        let userImageFile = book["Cover"] as! PFFile
-        userImageFile.getDataInBackgroundWithBlock {
-            (imageData: NSData?, error: NSError?) -> Void in
-            if error == nil {
-                if let imageData = imageData {
-                    cell.coverImageView.image = UIImage(data:imageData)
+        
+        let name : String = [String](_library.keys)[collectionView.tag]
+        
+         var books = self._library[name]! as [PFObject]
+        
+        let book = books[indexPath.item]
+        
+        if(collectionView.tag > 2){
+            print("#Tag \(collectionView.tag) for Book loaded  \(book.objectForKey("Titre"))")
+        }
+        if let userImageFile = book["Cover"] as? PFFile{
+            userImageFile.getDataInBackgroundWithBlock {
+                (imageData: NSData?, error: NSError?) -> Void in
+                if error == nil {
+                    if let imageData = imageData {
+                        cell.coverImageView.image = UIImage(data:imageData)
+                    }
                 }
             }
         }
+
         
         //let image = UIImage(named: timeCovers2015[collectionView.tag][indexPath.item])
         //cell.coverImageView.image = image
@@ -167,9 +181,17 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! AFArticleItemCVCell
         print("didSelect color \(selectedCell.backgroundColor)")
         
-        let book = _books[indexPath.item]
+        
+        
+        let name : String = [String](_library.keys)[collectionView.tag]
+        
+        let books = self._library[name]! as [PFObject]
+        
+        let book = books[indexPath.item]
+
         
         let selectedBook = book["ePub"] as! PFFile
+        
         selectedBook.getDataInBackgroundWithBlock {
             (data: NSData?, error: NSError?) -> Void in
             if error == nil {
@@ -195,15 +217,35 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         print("logout")
         
         //firebaseRef.unauth()
-        PFUser.logOut()
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let appDel = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        appDel.window!.rootViewController = storyboard.instantiateViewControllerWithIdentifier("LoginNC") as! UINavigationController
+        let alert = UIAlertController(title: "Déconnexion", message:"Êtes vous sur de vouloir vous déconnecter ?", preferredStyle: .Alert)
+        let yesA = UIAlertAction(title: "Oui", style: .Default) { _ in
+            // Put here any code that you would like to execute when
+            // the user taps that OK button (may be empty in your case if that's just
+            // an informative alert)
+            PFUser.logOut()
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let appDel = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            appDel.window!.rootViewController = storyboard.instantiateViewControllerWithIdentifier("LoginNC") as! UINavigationController
+            
+            print("Logout appDel \(appDel)")
+            print("Logout root \(appDel.window!.rootViewController)")
+        }
+        let cancel = UIAlertAction(title: "Non", style: .Default) { _ in
+            // Put here any code that you would like to execute when
+            // the user taps that OK button (may be empty in your case if that's just
+            // an informative alert)
+        }
+        alert.addAction(cancel)
+        alert.addAction(yesA)
+
+        self.presentViewController(alert, animated: true){}
+
         
-        print("Logout appDel \(appDel)")
-        print("Logout root \(appDel.window!.rootViewController)")
+
         
         /*
          //Save Local
@@ -330,8 +372,8 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
             hud.hide(true)
             if error == nil  {
                 print("object: \(objects)")
-                self._books = objects!
-                self.model = generateRandomData(self._categories.count, itemsPerRow: self._books.count)
+                self._booksUnsorted = objects!
+                self.model = generateRandomData(self._categories.count, itemsPerRow: self._booksUnsorted.count)
                 self.sortBooks()
                 //self.tableView.reloadData()
             } else {
@@ -343,36 +385,21 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
     // MARK: -Rangement des livres dans les categories
     //
     func sortBooks() {
-        for book in _books {
-            let bookTags = book["Tags"] as! [String]
-            for bookTag in bookTags {
-                _library[bookTag]!.append(book)
-                print("tag: \(bookTag)")
-                print("book: \(book)")
+        for book in _booksUnsorted {
+            
+            
+            if let bookTags = book["Tags"] as? [String] {
+                for bookTag in bookTags {
+                    _library[bookTag]!.append(book)
+                    print("tag: \(bookTag)")
+                    print("book: \(book)")
+                }
             }
+
         }
         print("library: \(_library)")
         self.tableView.reloadData()
     }
 
-    // MARK: - Retourne une liste des tags uniques
-    //
-    /*
-     func getTitreSection() -> [String] {
-     var libraryTags = [String]()
-     for book in _books {
-     let bookTags = book["Tags"] as! [String]
-     for bookTag in bookTags {
-     if libraryTags.contains(bookTag) {}
-     else {
-     libraryTags.append(bookTag)
-     print("libraryTags: \(libraryTags)")
-     }
-     }
-     }
-     return libraryTags
-     }
-     */
-    
     
 }

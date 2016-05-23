@@ -284,10 +284,10 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YKV-fI-p7F">
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YKV-fI-p7F">
                                 <rect key="frame" x="152" y="356" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Inscription newsletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq3-wQ-5Md">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Inscription newsletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq3-wQ-5Md">
                                 <rect key="frame" x="218" y="361" width="165" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Grv-hr-orC"/>
@@ -309,10 +309,10 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I2u-Jv-6zS">
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I2u-Jv-6zS">
                                 <rect key="frame" x="152" y="405" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Accepter les conditions générales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUM-id-Ggv">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Accepter les conditions générales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUM-id-Ggv">
                                 <rect key="frame" x="218" y="410" width="259" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="25m-iR-Rgu"/>
@@ -386,7 +386,9 @@
                             <constraint firstItem="lFQ-E1-h27" firstAttribute="centerX" secondItem="ZiT-tH-ppI" secondAttribute="centerX" id="Be3-vE-zE5"/>
                             <constraint firstItem="p1L-F3-CTG" firstAttribute="centerX" secondItem="ZiT-tH-ppI" secondAttribute="centerX" id="DWY-8U-pcG"/>
                             <constraint firstItem="xUM-id-Ggv" firstAttribute="top" secondItem="bq3-wQ-5Md" secondAttribute="bottom" constant="21" id="ECM-yj-u2K"/>
-                            <constraint firstItem="NYI-2x-wY0" firstAttribute="top" secondItem="ezz-jI-Mq6" secondAttribute="bottom" constant="16" id="Eeq-7D-SWl"/>
+                            <constraint firstItem="NYI-2x-wY0" firstAttribute="top" secondItem="ezz-jI-Mq6" secondAttribute="bottom" constant="16" id="Eeq-7D-SWl">
+                                <variation key="widthClass=regular" constant="34"/>
+                            </constraint>
                             <constraint firstItem="xUM-id-Ggv" firstAttribute="leading" secondItem="I2u-Jv-6zS" secondAttribute="trailing" constant="17" id="GWD-Mj-Gb5"/>
                             <constraint firstItem="lFQ-E1-h27" firstAttribute="centerY" secondItem="ZiT-tH-ppI" secondAttribute="centerY" id="Grh-lD-Btk"/>
                             <constraint firstItem="WkZ-Xg-Hlm" firstAttribute="height" secondItem="lFQ-E1-h27" secondAttribute="height" id="Hov-UC-Z8U"/>
@@ -418,6 +420,9 @@
                             <constraint firstItem="WkZ-Xg-Hlm" firstAttribute="top" secondItem="NYI-2x-wY0" secondAttribute="bottom" constant="22" id="iBG-kx-dVA"/>
                             <constraint firstItem="lFQ-E1-h27" firstAttribute="top" secondItem="WkZ-Xg-Hlm" secondAttribute="bottom" constant="23" id="iuT-jH-bFI"/>
                             <constraint firstItem="YKV-fI-p7F" firstAttribute="leading" secondItem="I2u-Jv-6zS" secondAttribute="leading" id="kBI-9c-diy"/>
+                            <constraint firstItem="p1L-F3-CTG" firstAttribute="top" secondItem="lFQ-E1-h27" secondAttribute="bottom" constant="137" id="mA8-gw-tR0">
+                                <variation key="widthClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="I2u-Jv-6zS" firstAttribute="centerY" secondItem="xUM-id-Ggv" secondAttribute="centerY" id="mio-O9-Jqd"/>
                             <constraint firstItem="p1L-F3-CTG" firstAttribute="top" secondItem="xUM-id-Ggv" secondAttribute="bottom" constant="45" id="mpo-ny-HGN"/>
                             <constraint firstItem="I2u-Jv-6zS" firstAttribute="height" secondItem="YKV-fI-p7F" secondAttribute="height" id="mrj-5s-Ig0"/>
@@ -479,6 +484,7 @@
                                 <exclude reference="2g0-ln-T1S"/>
                                 <exclude reference="DWY-8U-pcG"/>
                                 <exclude reference="Ryk-f5-1Zd"/>
+                                <exclude reference="mA8-gw-tR0"/>
                                 <exclude reference="mpo-ny-HGN"/>
                                 <exclude reference="tal-HL-Egx"/>
                             </mask>
@@ -531,7 +537,8 @@
                                 <exclude reference="2g0-ln-T1S"/>
                                 <include reference="DWY-8U-pcG"/>
                                 <include reference="Ryk-f5-1Zd"/>
-                                <include reference="mpo-ny-HGN"/>
+                                <include reference="mA8-gw-tR0"/>
+                                <exclude reference="mpo-ny-HGN"/>
                                 <include reference="tal-HL-Egx"/>
                             </mask>
                         </variation>
@@ -549,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYD-UL-W6y" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733.25" y="196"/>
+            <point key="canvasLocation" x="1733.25" y="208"/>
         </scene>
         <!--Folio Reader Container-->
         <scene sceneID="58t-gt-5AF">
@@ -599,7 +606,7 @@
             </objects>
             <point key="canvasLocation" x="177" y="168"/>
         </scene>
-        <!--Home CatalogTVC-->
+        <!--ArticleFlix-->
         <scene sceneID="7tc-5Z-VMX">
             <objects>
                 <tableViewController storyboardIdentifier="Home" id="flk-H5-AyV" customClass="AFHomeCatalogTVC" customModule="ArticleFlix" customModuleProvider="target" sceneMemberID="viewController">
@@ -709,16 +716,19 @@
                             <outlet property="delegate" destination="flk-H5-AyV" id="E2f-Lm-g6y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pzx-OR-vAs">
+                    <navigationItem key="navigationItem" title="ArticleFlix" id="pzx-OR-vAs">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="HDx-sq-auE">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bcc-Iu-AWN">
                                 <rect key="frame" x="485" y="7" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Déconnexion"/>
+                                <state key="normal" title="Déconnexion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="logout:" destination="flk-H5-AyV" eventType="touchUpInside" id="Gg4-FV-Zb5"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -737,6 +747,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eds-39-OV4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -753,6 +764,6 @@
         <image name="background_black" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MDE-Oz-hJ5"/>
+        <segue reference="f2z-Nu-hlg"/>
     </inferredMetricsTieBreakers>
 </document>

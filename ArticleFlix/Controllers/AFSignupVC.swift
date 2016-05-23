@@ -39,13 +39,17 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
         
 
         
-                }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // End editing when touches the screen
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
 
         if textField == emailTextField {
@@ -91,9 +95,7 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
         
         // MARK: - Gestion de widget de loading
         //
-        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        hud.mode = MBProgressHUDMode.Indeterminate
-        hud.labelText = "Inscription en cours"
+
         
         
         // MARK: - FIREBASE Signup
@@ -123,18 +125,22 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
         
         
         if email == "" {
-            SCLAlertView().showError("User Email Missing", subTitle: "User Email Missing")
+            SCLAlertView().showError("Email manquant", subTitle: "Veuillez renseigner un email")
         }
         else if pwd == "" {
-            SCLAlertView().showError("Password Missing", subTitle: "Password Missing")
+            SCLAlertView().showError("Mot de passe recquis", subTitle: "Veuillez renseigner un mot de passe")
         }
         else if repwd != pwd {
-            SCLAlertView().showError("Password Not Identical", subTitle: "Password Not Identical")
+            SCLAlertView().showError("Mot de passe différent", subTitle: "Les mots de passe que vous avez renseigné ne correspondent pas")
         }
-        else if cond.on != true {
-            SCLAlertView().showError("Conditions not accepted", subTitle: "Veuillez accepter les conditions générales")
-        }
+//        else if cond.on != true {
+//            SCLAlertView().showError("Conditions not accepted", subTitle: "Veuillez accepter les conditions générales")
+//        }
         else {
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.mode = MBProgressHUDMode.Indeterminate
+            hud.labelText = "Inscription en cours"
+            
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool, error: NSError?) -> Void in
                 
@@ -145,19 +151,23 @@ class AFSignupVC: UIViewController, UITextFieldDelegate {
                     // Show the errorString somewhere and let the user try again.
                     switch (error.code) {
                     case 200:
-                        SCLAlertView().showError("User Email Missing", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("E-mail manquant", subTitle: "Code Erreur \(error.code)")
                     case 125:
-                        SCLAlertView().showError("User Email Invalid", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("E-mail non valide", subTitle: "Code Erreur \(error.code)")
                     case 201:
-                        SCLAlertView().showError("Password Missing", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("Mot de passe manquant", subTitle: "Code Erreur \(error.code)")
                     case 203:
-                        SCLAlertView().showError("User Email Taken", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("E-mail déjà existant", subTitle: "Code Erreur \(error.code)")
+                    case 204:
+                        SCLAlertView().showError("Erreur", subTitle: "Vous devez renseigner une adresse mail")
                     case 205:
-                        SCLAlertView().showError("User Email Not Found", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("E-mail inexistant", subTitle: "Code Erreur \(error.code)")
                     case 208:
-                        SCLAlertView().showError("User Already Exist", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("Utilisateur déjà existant", subTitle: "Code Erreur \(error.code)")
+                        
+                        
                     default:
-                        SCLAlertView().showError("Handle default situation", subTitle: "Error Code \(error.code)")
+                        SCLAlertView().showError("Erreur de connexion", subTitle: "Code Erreur \(error.code)")
                     }
                 } else {
                     // Hooray! Let them use the app now.
