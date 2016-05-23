@@ -88,7 +88,7 @@ class AFLoginVC: UIViewController, UITextFieldDelegate {
             
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
             hud.mode = MBProgressHUDMode.Indeterminate
-            hud.labelText = "Loading"
+            hud.labelText = "Chargement en cours"
             
             PFUser.logInWithUsernameInBackground(email, password: pwd) {
                 (user: PFUser?, error: NSError?) -> Void in

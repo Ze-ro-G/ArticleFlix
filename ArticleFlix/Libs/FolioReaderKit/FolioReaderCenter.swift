@@ -362,11 +362,17 @@ public class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UICo
     }
 
     func reloadData() {
-       // loadingView.stopAnimating()
+        
+        if let loadingView = self.loadingView {
+            loadingView.stopAnimating()
+        }
         bookShareLink = readerConfig.localizedShareWebLink
         totalPages = book.spine.spineReferences.count
 
-        collectionView.reloadData()
+        if let collectionv = collectionView {
+            collectionView.reloadData()
+
+        }
         configureNavBarButtons()
         
         if let position = FolioReader.defaults.valueForKey(kBookId) as? NSDictionary,
