@@ -178,6 +178,13 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        // MARK: - Gestion de widget de loading
+        //
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = MBProgressHUDMode.Indeterminate
+        hud.labelText = "Chargement de l'article"
+
+        
         selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! AFArticleItemCVCell
         print("didSelect color \(selectedCell.backgroundColor)")
         
@@ -194,6 +201,7 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         
         selectedBook.getDataInBackgroundWithBlock {
             (data: NSData?, error: NSError?) -> Void in
+            hud.hide(true)
             if error == nil {
                 if let bookData = data {
                     let titre = book["Titre"] as! String
@@ -219,7 +227,7 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         //firebaseRef.unauth()
         
         
-        let alert = UIAlertController(title: "Déconnexion", message:"Êtes vous sur de vouloir vous déconnecter ?", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Déconnexion", message:"Êtes vous sûr de vouloir vous déconnecter ?", preferredStyle: .Alert)
         let yesA = UIAlertAction(title: "Oui", style: .Default) { _ in
             // Put here any code that you would like to execute when
             // the user taps that OK button (may be empty in your case if that's just
@@ -314,9 +322,12 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
     // MARK: - fonctions FolioReader
     //
     func open(path: String) {
-        let config = FolioReaderConfig()
-        //let bookPath = NSBundle.mainBundle().pathForResource("bookData", ofType: "ePub")
-        FolioReader.presentReader(parentViewController: self, withEpubPath: path, andConfig: config)
+        
+       
+            let config = FolioReaderConfig()
+            //let bookPath = NSBundle.mainBundle().pathForResource("bookData", ofType: "ePub")
+            FolioReader.presentReader(parentViewController: self, withEpubPath: path, andConfig: config)
+     
     }
     
     func getDocumentsDirectory() -> NSString {
@@ -332,7 +343,7 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         //
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.mode = MBProgressHUDMode.Indeterminate
-        hud.labelText = "Loading"
+        hud.labelText = "Chargement de la bibliothèque"
         
         // MARK: - Chargement de la liste des livres
         //
@@ -363,7 +374,7 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         //
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.mode = MBProgressHUDMode.Indeterminate
-        hud.labelText = "Loading"
+        hud.labelText = "Chargement"
         
         // MARK: - Chargement de la liste des livres
         //

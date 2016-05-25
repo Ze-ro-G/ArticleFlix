@@ -327,7 +327,7 @@ public class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UICo
         // Navbar icons
         let shareIcon = UIImage(readerImageNamed: "btn-navbar-share")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
         let audioIcon = UIImage(readerImageNamed: "man-speech-icon")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
-        let menuIcon = UIImage(readerImageNamed: "btn-navbar-menu")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
+        let menuIcon = UIImage(readerImageNamed: "list_Icon")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
         let fontIcon = UIImage(readerImageNamed: "icon-font")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
         let closeIcon = UIImage(readerImageNamed: "back_Icon_nav")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
 
