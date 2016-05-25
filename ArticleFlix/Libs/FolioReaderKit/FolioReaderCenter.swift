@@ -329,7 +329,7 @@ public class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UICo
         let audioIcon = UIImage(readerImageNamed: "man-speech-icon")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
         let menuIcon = UIImage(readerImageNamed: "btn-navbar-menu")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
         let fontIcon = UIImage(readerImageNamed: "icon-font")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
-        let closeIcon = UIImage(readerImageNamed: "icon-close")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
+        let closeIcon = UIImage(readerImageNamed: "back_Icon_nav")!.imageTintColor(readerConfig.tintColor).imageWithRenderingMode(.AlwaysOriginal)
 
         // Navbar buttons
         let closeButton = UIBarButtonItem(image: closeIcon, style: UIBarButtonItemStyle.Plain, target: self, action:#selector(FolioReaderCenter.didSelectClose(_:)))

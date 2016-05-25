@@ -336,7 +336,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcs-nq-BxE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="back_icon"/>
+                                <state key="normal" image="back_Icon"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="20" y="28" width="40" height="40"/>
                                 </variation>
@@ -446,13 +446,13 @@
                                 <exclude reference="Zb2-uR-FKB"/>
                                 <exclude reference="fj7-cR-0EB"/>
                                 <exclude reference="ft8-fQ-iNT"/>
-                                <exclude reference="XLx-Me-D4y"/>
-                                <exclude reference="uRV-L9-W0b"/>
                                 <exclude reference="Eeq-7D-SWl"/>
                                 <exclude reference="SwC-nj-4hE"/>
                                 <exclude reference="Wmg-7I-WfU"/>
                                 <exclude reference="Zxm-f1-JfW"/>
                                 <exclude reference="nzl-ap-MlD"/>
+                                <exclude reference="XLx-Me-D4y"/>
+                                <exclude reference="uRV-L9-W0b"/>
                                 <exclude reference="Hov-UC-Z8U"/>
                                 <exclude reference="Tn1-Lr-Ze5"/>
                                 <exclude reference="iBG-kx-dVA"/>
@@ -466,15 +466,15 @@
                                 <exclude reference="iuT-jH-bFI"/>
                                 <exclude reference="RdD-zJ-Mse"/>
                                 <exclude reference="kBI-9c-diy"/>
+                                <exclude reference="4PP-5z-Lqa"/>
+                                <exclude reference="hcD-e0-ctK"/>
+                                <exclude reference="rru-kz-MOB"/>
+                                <exclude reference="yoF-Zk-E1K"/>
                                 <exclude reference="ZS1-nR-rST"/>
                                 <exclude reference="dPz-wS-djc"/>
                                 <exclude reference="mio-O9-Jqd"/>
                                 <exclude reference="mrj-5s-Ig0"/>
                                 <exclude reference="xRU-Tu-dM6"/>
-                                <exclude reference="4PP-5z-Lqa"/>
-                                <exclude reference="hcD-e0-ctK"/>
-                                <exclude reference="rru-kz-MOB"/>
-                                <exclude reference="yoF-Zk-E1K"/>
                                 <exclude reference="ECM-yj-u2K"/>
                                 <exclude reference="GWD-Mj-Gb5"/>
                                 <exclude reference="bJF-sl-Va0"/>
@@ -499,13 +499,13 @@
                                 <include reference="Zb2-uR-FKB"/>
                                 <include reference="fj7-cR-0EB"/>
                                 <include reference="ft8-fQ-iNT"/>
-                                <include reference="XLx-Me-D4y"/>
-                                <include reference="uRV-L9-W0b"/>
                                 <include reference="Eeq-7D-SWl"/>
                                 <include reference="SwC-nj-4hE"/>
                                 <include reference="Wmg-7I-WfU"/>
                                 <include reference="Zxm-f1-JfW"/>
                                 <exclude reference="nzl-ap-MlD"/>
+                                <include reference="XLx-Me-D4y"/>
+                                <include reference="uRV-L9-W0b"/>
                                 <include reference="Hov-UC-Z8U"/>
                                 <include reference="Tn1-Lr-Ze5"/>
                                 <include reference="iBG-kx-dVA"/>
@@ -519,15 +519,15 @@
                                 <exclude reference="iuT-jH-bFI"/>
                                 <include reference="RdD-zJ-Mse"/>
                                 <include reference="kBI-9c-diy"/>
+                                <include reference="4PP-5z-Lqa"/>
+                                <include reference="hcD-e0-ctK"/>
+                                <include reference="rru-kz-MOB"/>
+                                <exclude reference="yoF-Zk-E1K"/>
                                 <include reference="ZS1-nR-rST"/>
                                 <include reference="dPz-wS-djc"/>
                                 <exclude reference="mio-O9-Jqd"/>
                                 <include reference="mrj-5s-Ig0"/>
                                 <include reference="xRU-Tu-dM6"/>
-                                <include reference="4PP-5z-Lqa"/>
-                                <include reference="hcD-e0-ctK"/>
-                                <include reference="rru-kz-MOB"/>
-                                <exclude reference="yoF-Zk-E1K"/>
                                 <exclude reference="ECM-yj-u2K"/>
                                 <exclude reference="GWD-Mj-Gb5"/>
                                 <include reference="bJF-sl-Va0"/>
@@ -572,7 +572,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="X5o-2D-lzx">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="pJ9-Ih-0KH">
+                        <barButtonItem key="rightBarButtonItem" id="pJ9-Ih-0KH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="73Q-s1-dT9">
                                 <rect key="frame" x="485" y="7" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -604,7 +604,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYo-2d-Eru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="177" y="168"/>
+            <point key="canvasLocation" x="-163" y="208"/>
         </scene>
         <!--ArticleFlix-->
         <scene sceneID="7tc-5Z-VMX">
@@ -615,7 +615,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="210" id="sJV-gq-6we" customClass="AFHomeCatalogTVCell" customModule="ArticleFlix" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="210" id="sJV-gq-6we" customClass="AFHomeCatalogTVCell" customModule="ArticleFlix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="82" width="600" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sJV-gq-6we" id="RcO-PH-C6r">
@@ -717,7 +717,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ArticleFlix" id="pzx-OR-vAs">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="HDx-sq-auE">
+                        <barButtonItem key="rightBarButtonItem" id="HDx-sq-auE">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bcc-Iu-AWN">
                                 <rect key="frame" x="485" y="7" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -760,7 +760,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back_icon" width="57" height="57"/>
+        <image name="back_Icon" width="57" height="57"/>
         <image name="background_black" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>

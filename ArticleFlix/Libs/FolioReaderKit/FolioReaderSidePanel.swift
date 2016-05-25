@@ -48,7 +48,7 @@ class FolioReaderSidePanel: UIViewController, UITableViewDelegate, UITableViewDa
         //view.addSubview(toolBar)
         
         let imageHighlight = UIImage(readerImageNamed: "icon-highlight")
-        let imageClose = UIImage(readerImageNamed: "icon-close")
+        let imageClose = UIImage(readerImageNamed: "back_Icon_nav")
         let imageFont = UIImage(readerImageNamed: "icon-font")
         let space = 70 as CGFloat
         

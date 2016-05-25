@@ -133,9 +133,9 @@ public class FolioReaderContainer: UIViewController, FolioReaderSidePanelDelegat
                         self.addAudioPlayer()
                         
                         // Open panel if does not have a saved point
-                        if FolioReader.defaults.valueForKey(kBookId) == nil {
-                            self.toggleLeftPanel()
-                        }
+//                        if FolioReader.defaults.valueForKey(kBookId) == nil {
+//                            self.toggleLeftPanel()
+//                        }
                         
                         FolioReader.sharedInstance.isReaderReady = true
                     })

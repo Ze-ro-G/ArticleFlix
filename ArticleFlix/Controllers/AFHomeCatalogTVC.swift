@@ -33,7 +33,7 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
     var _booksUnsorted: [PFObject] = []
     var _categories: [PFObject] = []
 
-    
+    // Library: dictionnaire Category: Livre
     var _library: [String:[PFObject]] = [:]
     
     
