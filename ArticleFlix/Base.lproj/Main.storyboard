@@ -286,6 +286,9 @@
                             </textField>
                             <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YKV-fI-p7F">
                                 <rect key="frame" x="152" y="356" width="51" height="31"/>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="249" y="334" width="51" height="31"/>
+                                </variation>
                             </switch>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Inscription newsletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq3-wQ-5Md">
                                 <rect key="frame" x="218" y="361" width="165" height="21"/>
@@ -311,6 +314,9 @@
                             </label>
                             <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I2u-Jv-6zS">
                                 <rect key="frame" x="152" y="405" width="51" height="31"/>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="249" y="373" width="51" height="31"/>
+                                </variation>
                             </switch>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Accepter les conditions générales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUM-id-Ggv">
                                 <rect key="frame" x="218" y="410" width="259" height="21"/>
@@ -719,7 +725,7 @@
                     <navigationItem key="navigationItem" title="ArticleFlix" id="pzx-OR-vAs">
                         <barButtonItem key="rightBarButtonItem" id="HDx-sq-auE">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bcc-Iu-AWN">
-                                <rect key="frame" x="485" y="7" width="95" height="30"/>
+                                <rect key="frame" x="484" y="7" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Déconnexion">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
