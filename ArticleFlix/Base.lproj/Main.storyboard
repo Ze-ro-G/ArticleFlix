@@ -286,9 +286,6 @@
                             </textField>
                             <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YKV-fI-p7F">
                                 <rect key="frame" x="152" y="356" width="51" height="31"/>
-                                <variation key="widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="249" y="334" width="51" height="31"/>
-                                </variation>
                             </switch>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Inscription newsletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq3-wQ-5Md">
                                 <rect key="frame" x="218" y="361" width="165" height="21"/>
@@ -314,9 +311,6 @@
                             </label>
                             <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I2u-Jv-6zS">
                                 <rect key="frame" x="152" y="405" width="51" height="31"/>
-                                <variation key="widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="249" y="373" width="51" height="31"/>
-                                </variation>
                             </switch>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Accepter les conditions générales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUM-id-Ggv">
                                 <rect key="frame" x="218" y="410" width="259" height="21"/>
