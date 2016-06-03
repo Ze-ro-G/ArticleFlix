@@ -358,6 +358,8 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
                     self._library[categoryName] = []
                 }
                 self.getBooks()
+                //hud.hide(true)
+
                 //self.tableView.reloadData()
             } else {
                 print(error)
@@ -372,15 +374,15 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         
         // MARK: - Gestion de widget de loading
         //
-        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        hud.mode = MBProgressHUDMode.Indeterminate
-        hud.labelText = "Chargement"
+        //let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        //hud.mode = MBProgressHUDMode.Indeterminate
+        //hud.labelText = "Chargement"
         
         // MARK: - Chargement de la liste des livres
         //
         let query = PFQuery(className:"Book")
         query.findObjectsInBackgroundWithBlock { (objects, error) in
-            hud.hide(true)
+            //hud.hide(true)
             if error == nil  {
                 print("object: \(objects)")
                 self._booksUnsorted = objects!
