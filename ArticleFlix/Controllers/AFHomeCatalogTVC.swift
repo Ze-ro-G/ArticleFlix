@@ -42,7 +42,13 @@ class AFHomeCatalogTVC: UITableViewController, UICollectionViewDelegate, UIColle
         
         print("HTVC didLoad")
 
-        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background_black")!)
+        //self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background_black")!)
+        let imageView = UIImageView(frame: self.view.frame)
+        let image = UIImage(named: "background_black")!
+        imageView.image = image
+        self.view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
+        
                 
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.redColor()]
 

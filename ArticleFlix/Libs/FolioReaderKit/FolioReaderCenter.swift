@@ -196,7 +196,7 @@ class ScrollScrubber: NSObject, UIScrollViewDelegate {
             scrollDeltaTimer.invalidate()
             scrollDeltaTimer = nil
         }
-        
+    
         scrollStart = scrollView().contentOffset.y
         scrollDelta = 0
     }
